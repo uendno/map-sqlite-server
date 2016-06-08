@@ -6,22 +6,54 @@ var versionutil = require('../utils/versionutil');
 /* GET users listing. */
 router.get('/', function (req, res) {
 
-    Location.find({}, function (err, locations) {
+    //check version number
+    if (req.headers["if_modified_date"] ==null) {
+        return res.send({
+            success: false,
+            message: "Null if_modified_date"
+        });
+    } else {
 
-        if (!err) {
+        versionutil.getModifiedDate('locations', function(err, date) {
+            if (err) {
+                console.log(err);
+                return res.send({
+                    success: false,
+                    message: err.message
+                });
+            } else {
 
-            return res.send({
-                success: true,
-                data: locations
-            });
-        } else {
-            console.log(err);
-            return res.send({
-                success: false,
-                message: err.message
-            });
-        }
-    })
+                console.log(req.headers["if_modified_date"] +" " + date.toISOString() + " ");
+                console.log(req.headers["if_modified_date"] == date.toISOString());
+
+
+                if (req.headers["if_modified_date"] == date.toISOString()) {
+                    return res.send({
+                        success: false,
+                        message: "Nothing new"
+                    });
+                } else {
+                    Location.find({}, function (err, locations) {
+
+                        if (!err) {
+
+                            return res.send({
+                                success: true,
+                                data: locations,
+                                modified_since: date
+                            });
+                        } else {
+                            console.log(err);
+                            return res.send({
+                                success: false,
+                                message: err.message
+                            });
+                        }
+                    })
+                }
+            }
+        })
+    }
 });
 
 router.get('/init', function (req, res) {
@@ -42,15 +74,24 @@ router.get('/init', function (req, res) {
             });
         } else {
 
-            versionutil.increaseVersionnumber('locations');
-            return res.send({
-                success: true,
-                message: "Init complete",
-                _id: location._id
-            });
+            versionutil.setModifiedDate('locations', function(err, date) {
+                if (err) {
+                    return res.send({
+                        success: false,
+                        message: err.message,
+
+                    });
+                } else {
+                    return res.send({
+                        success: true,
+                        message: "Init complete",
+                        _id: location._id,
+                        modified_since: date
+                    });
+                }
+            })
         }
     });
-
 });
 
 router.post('/', function (req, res) {
@@ -69,12 +110,22 @@ router.post('/', function (req, res) {
                 message: err.message
             });
         } else {
-            versionutil.increaseVersionnumber('locations');
-            return res.send({
-                success: true,
-                message: "Post complete",
-                _id: location._id
-            });
+
+            versionutil.setModifiedDate('locations', function(err, date) {
+                if (err) {
+                    return res.send({
+                        success: false,
+                        message: err.message,
+                    });
+                } else {
+                    return res.send({
+                        success: true,
+                        message: "Init complete",
+                        _id: location._id,
+                        modified_since: date
+                    });
+                }
+            })
         }
     });
 });
@@ -87,11 +138,21 @@ router.delete('/:id', function(req,res){
                 message: err.message
             });
         } else {
-            versionutil.increaseVersionnumber('locations');
-            return res.send({
-                success: true,
-                message: "Delete complete"
-            });
+
+            versionutil.setModifiedDate('locations', function(err, date) {
+                if (err) {
+                    return res.send({
+                        success: false,
+                        message: err.message,
+                    });
+                } else {
+                    return res.send({
+                        success: true,
+                        message: "Delete complete",
+                        modified_since: date
+                    });
+                }
+            })
         }
     })
 });

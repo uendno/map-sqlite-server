@@ -5,29 +5,62 @@
 var Version = require('../models/Version');
 
 module.exports = {
-    increaseVersionnumber: function (db) {
+    setModifiedDate: function (db, next) {
 
         Version.findOne({db_name: db}, function (err, version) {
             if (err) {
-                console.log(err);
+                next(err, null);
             } else {
                 if (version == null) {
-                    var version = new Version({
+                    var newVersion = new Version({
                         db_name: db,
-                        version_number: 1
-                    })
-                    version.save(function(err) {
+                        modified_since: new Date()
+                    });
+
+                    newVersion.save(function (err) {
                         if (err) {
-                            console.log(err);
+                            next(err, null);
+                        } else {
+                            next(null, newVersion.modified_since);
                         }
                     })
                 } else {
-                    version.version_number = version.version_number + 1;
+                    version.modified_since = new Date();
                     version.save(function (err) {
-                        if(err) {
-                            console.log(err);
+                        if (err) {
+                            next(err, null);
+                        } else {
+                            next(null, version.modified_since);
                         }
                     });
+                }
+            }
+        })
+    },
+
+    getModifiedDate: function (db, next) {
+
+        Version.findOne({db_name: db}, function (err, version) {
+            if (err) {
+                next(err, null);
+            } else {
+                if (version == null) {
+                    var newVersion = new Version({
+                        db_name: db,
+                        if_modified_since: new Date()
+                    });
+
+                    newVersion.save(function (err) {
+                        if (err) {
+                            next(err, null);
+                        } else {
+                            next(null, newVersion.modified_since);
+                        }
+                    })
+                } else {
+
+                    next(null, version.modified_since);
+
                 }
             }
         })

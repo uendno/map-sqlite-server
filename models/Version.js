@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var versionSchema = new Schema ({
     db_name: String,
-    version_number: Number,
+    modified_since: Date
 });
 
 var Location = mongoose.model('Version', versionSchema);
