@@ -7,10 +7,10 @@ var versionutil = require('../utils/versionutil');
 router.get('/', function (req, res) {
 
     //check version number
-    if (req.headers["if_modified_date"] ==null) {
+    if (req.headers["if_modified_since"] ==null) {
         return res.send({
             success: false,
-            message: "Null if_modified_date"
+            message: "Null if_modified_since"
         });
     } else {
 
@@ -23,11 +23,7 @@ router.get('/', function (req, res) {
                 });
             } else {
 
-                console.log(req.headers["if_modified_date"] +" " + date.toISOString() + " ");
-                console.log(req.headers["if_modified_date"] == date.toISOString());
-
-
-                if (req.headers["if_modified_date"] == date.toISOString()) {
+                if (req.headers["if_modified_since"] == date.toISOString()) {
                     return res.send({
                         success: false,
                         message: "Nothing new"
