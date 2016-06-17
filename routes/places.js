@@ -41,7 +41,40 @@ router.get('/:id', function (req, res) {
             }
         }
     })
-    
+});
+
+router.get('/:id/reviews', function (req, res) {
+    var placeId = req.params.id;
+
+    request({
+        url: 'https://maps.googleapis.com/maps/api/place/details/json',
+        qs: {
+            placeid: placeId,
+            key: config.google.PLACE_API_KEY
+        },
+        method: 'GET'
+    }, function (googleErr, googleRes, googleBody) {
+        if (googleErr) {
+            console.log(googleErr);
+            return res.send({
+                success: false,
+                message: "Request failed"
+            })
+        } else {
+            if (googleRes.statusCode!=200) {
+                return res.send({
+                    success: false,
+                    message: "Request failed"
+                })
+            } else {
+                return res.send({
+                    success: true,
+                    message: "Request successfully",
+                    data: JSON.parse(googleBody).result.reviews
+                })
+            }
+        }
+    })
 });
 
 module.exports = router;
