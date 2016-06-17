@@ -34,9 +34,9 @@ router.get('/:id', function (req, res) {
                 })
             } else {
                 return res.send({
-                    success: false,
+                    success: true,
                     message: "Request successfully",
-                    data: googleBody
+                    data: JSON.parse(googleBody)
                 })
             }
         }
