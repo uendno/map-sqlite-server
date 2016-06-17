@@ -15,7 +15,7 @@ router.get('/:id', function (req, res) {
     request({
         url: 'https://maps.googleapis.com/maps/api/place/details/json',
         qs: {
-            placeid: placeid,
+            placeid: placeId,
             key: config.google.PLACE_API_KEY
         },
         method: 'GET'
