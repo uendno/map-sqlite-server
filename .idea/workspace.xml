@@ -41,8 +41,8 @@
       <file leaf-file-name="places.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/places.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="99" column="60" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="60" />
+            <state relative-caret-position="292">
+              <caret line="99" column="63" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
               </folding>
@@ -408,7 +408,7 @@
       <workItem from="1466135510046" duration="815000" />
       <workItem from="1466742644292" duration="269000" />
       <workItem from="1466847464458" duration="1350000" />
-      <workItem from="1466928936989" duration="1203000" />
+      <workItem from="1466928936989" duration="1324000" />
     </task>
     <task id="LOCAL-00001" summary="abc">
       <created>1465197244958</created>
@@ -480,11 +480,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466930043992</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix bug">
+      <created>1466930245378</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1466930245378</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23259000" />
+    <option name="totallyTimeSpent" value="23380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="701" extended-state="6" />
@@ -894,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/places.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="99" column="60" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="60" />
+        <state relative-caret-position="292">
+          <caret line="99" column="63" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
           </folding>

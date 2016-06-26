@@ -76,9 +76,9 @@ var getPlaceDetails = function (placeId, next) {
             err = "Can't get detail"
         }
 
-        console.log("details body: " + json(placeBody));
+        console.log("details body: " + JSON.parse(placeBody));
 
-        next(err, json(placeBody));
+        next(err, JSON.parse(placeBody));
     })
 };
 
@@ -97,9 +97,9 @@ var getNearByPlaces = function (location, next) {
             err = "Can't get nearby places"
         }
 
-        console.log("nearby places body: " + json(placesBody));
+        console.log("nearby places body: " + JSON.parse(placesBody));
 
-        next(err, json(placesBody));
+        next(err, JSON.parse(placesBody));
     })
 };
 
