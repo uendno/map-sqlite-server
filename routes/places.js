@@ -62,7 +62,7 @@ router.get('/:id/reviews', function (req, res) {
 });
 
 
-var getPlaceDetails = function (placeid, next) {
+var getPlaceDetails = function (placeId, next) {
     request({
         url: 'https://maps.googleapis.com/maps/api/place/details/json',
         qs: {
@@ -83,7 +83,6 @@ var getNearByPlaces = function (location, next) {
     request({
         url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json',
         qs: {
-            placeid: placeId,
             key: config.google.PLACE_API_KEY,
             location: location.lat + "," + location.lng,
             radius: 5000
