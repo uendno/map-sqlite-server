@@ -75,7 +75,10 @@ var getPlaceDetails = function (placeId, next) {
         if (placeRes.statusCode != 200) {
             err = "Can't get detail"
         }
-        next(err, placeBody);
+
+        console.log("details body: " + json(placeBody));
+
+        next(err, json(placeBody));
     })
 };
 
@@ -93,7 +96,10 @@ var getNearByPlaces = function (location, next) {
         if (placesRes.statusCode != 200) {
             err = "Can't get nearby places"
         }
-        next(err, placesBody);
+
+        console.log("nearby places body: " + json(placesBody));
+
+        next(err, json(placesBody));
     })
 };
 
