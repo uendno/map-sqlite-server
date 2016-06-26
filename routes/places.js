@@ -49,8 +49,8 @@ router.get('/:id/reviews', function (req, res) {
                         return res.send({
                             success: true,
                             data: {
-                                reviews: details.reviews,
-                                nearby_plcaes: places.results
+                                reviews: details.result.reviews,
+                                nearby_places: places.results
                             }
                         })
                     }
