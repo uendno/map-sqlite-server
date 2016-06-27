@@ -62,6 +62,24 @@ router.get('/:id/reviews', function (req, res) {
 });
 
 
+router.get('photo/:id', function(req, res) {
+    var photoRef = res.params.id
+    
+    getPlacePhoto(photoRef, function (err, body) {
+        if (err) {
+            return res.send({
+                success: false,
+                message: err
+            })
+        } else {
+            res.set('Content-Type', 'image/png');
+            return res.send(body);
+        }
+    })
+    
+});
+
+
 var getPlaceDetails = function (placeId, next) {
     request({
         url: 'https://maps.googleapis.com/maps/api/place/details/json',
@@ -100,6 +118,48 @@ var getNearByPlaces = function (location, next) {
         console.log("nearby places body: " + JSON.parse(placesBody));
 
         next(err, JSON.parse(placesBody));
+    })
+};
+
+var getPlacePhoto = function(photoRef, next) {
+
+    var requestSettings = {
+        url: 'https://maps.googleapis.com/maps/api/place/photo',
+        qs: {
+            key: config.google.PLACE_API_KEY,
+            photoreference: photoRef,
+            maxwidth: 400
+        },
+        method: 'GET',
+        encoding: null
+    };
+
+    request(requestSettings, function(err, photoRes, photoBody) {
+
+        if(photoRes.statusCode != 200) {
+            err = "Can't get nearyby places"
+        }
+        var requestSettings = {
+            url: 'https://maps.googleapis.com/maps/api/place/photo',
+            qs: {
+                key: config.google.PLACE_API_KEY,
+                photoreference: photoRef,
+                maxwidth: 400
+            },
+            method: 'GET',
+            encoding: null
+        };
+
+        request(requestSettings, function(err, photoRes, photoBody) {
+
+            if(photoRes.statusCode != 200) {
+                err = "Can't get nearyby places"
+            }
+            
+            next(err, photoBody)
+        });
+
+        next(err, photoBody)
     })
 };
 
