@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f2e8387-947f-498b-824f-835f82b5cb93" name="Default" comment="">
+    <list default="true" id="7f2e8387-947f-498b-824f-835f82b5cb93" name="Default" comment="fix bug id">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/places.js" afterPath="$PROJECT_DIR$/routes/places.js" />
     </list>
@@ -41,8 +41,8 @@
       <file leaf-file-name="places.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/places.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+            <state relative-caret-position="450">
+              <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
               </folding>
@@ -323,7 +323,7 @@
       <workItem from="1466742644292" duration="269000" />
       <workItem from="1466847464458" duration="1350000" />
       <workItem from="1466928936989" duration="1619000" />
-      <workItem from="1467008927946" duration="1120000" />
+      <workItem from="1467008927946" duration="1915000" />
     </task>
     <task id="LOCAL-00001" summary="abc">
       <created>1465197244958</created>
@@ -416,20 +416,35 @@
       <option name="project" value="LOCAL" />
       <updated>1466930559686</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add: get photo by reference">
+      <created>1467010178332</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1467010178332</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix bug url">
+      <created>1467010988730</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1467010988730</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24795000" />
+    <option name="totallyTimeSpent" value="25590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="701" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981412" sideWeight="0.4844517" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981412" sideWeight="0.4816626" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981412" sideWeight="0.5155483" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981412" sideWeight="0.5183374" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32676518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981412" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -466,7 +481,9 @@
     <MESSAGE value="add get nearby places" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="add: get photo by reference" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: get photo by reference" />
+    <MESSAGE value="fix bug url" />
+    <MESSAGE value="fix bug id" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -831,8 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/places.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="450">
+          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
           </folding>

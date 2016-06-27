@@ -63,7 +63,7 @@ router.get('/:id/reviews', function (req, res) {
 
 
 router.get('/photo/:id', function(req, res) {
-    var photoRef = res.params.id
+    var photoRef = req.params.id;
     
     getPlacePhoto(photoRef, function (err, body) {
         if (err) {
