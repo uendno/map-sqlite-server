@@ -65,7 +65,7 @@ router.get('/direction', function (req, res) {
     var originId = req.query.origin;
     var destinationId = req.query.destination;
 
-    console.log("origin: " + originId +", destination: " + destinationId);
+    return res.send("origin: " + originId +", destination: " + destinationId);
 
     request({
         url: 'https://maps.googleapis.com/maps/api/directions/json',
