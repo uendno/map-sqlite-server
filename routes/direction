@@ -30,7 +30,7 @@ router.get('/', function (req, res) {
         } else {
             return res.send({
                 success: true,
-                data: directionBody
+                data: JSON.parse(directionBody);
             })
         }
     })
