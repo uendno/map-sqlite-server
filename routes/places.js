@@ -61,37 +61,7 @@ router.get('/:id/reviews', function (req, res) {
     })
 });
 
-router.get('/direct', function (req, res) {
 
-    var originId = req.query.origin;
-    var destinationId = req.query.destination;
-
-    return res.send("origin: " + originId +", destination: " + destinationId);
-
-    request({
-        url: 'https://maps.googleapis.com/maps/api/directions/json',
-        qs: {
-            origin: "place_id:" + originId,
-            destination: "place_id:" + destinationId,
-            key: config.google.PLACE_API_KEY
-        },
-        method: 'GET'
-    }, function (err, directionRes, directionBody) {
-
-       if (err) {
-           return res.send({
-               success: false,
-               message: err
-           })
-       } else {
-           return res.send({
-               success: true,
-               data: directionBody
-           })
-       }
-    })
-
-});
 
 
 router.get('/photo/:id', function(req, res) {
