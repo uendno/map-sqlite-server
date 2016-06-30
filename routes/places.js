@@ -61,7 +61,8 @@ router.get('/:id/reviews', function (req, res) {
     })
 });
 
-router.get('/direction', function (req, res) {
+router.get('/direct', function (req, res) {
+
     var originId = req.query.origin;
     var destinationId = req.query.destination;
 

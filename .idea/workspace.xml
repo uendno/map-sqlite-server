@@ -41,10 +41,12 @@
       <file leaf-file-name="places.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/places.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
+                <element signature="e#225#493#0" expanded="false" />
+                <element signature="e#544#1602#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -325,7 +327,7 @@
       <workItem from="1466847464458" duration="1350000" />
       <workItem from="1466928936989" duration="1619000" />
       <workItem from="1467008927946" duration="2794000" />
-      <workItem from="1467271451358" duration="1667000" />
+      <workItem from="1467271451358" duration="1938000" />
     </task>
     <task id="LOCAL-00001" summary="abc">
       <created>1465197244958</created>
@@ -453,11 +455,18 @@
       <option name="project" value="LOCAL" />
       <updated>1467273146690</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="debug">
+      <created>1467273383428</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1467273383428</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28136000" />
+    <option name="totallyTimeSpent" value="28407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="23" width="1318" height="745" extended-state="6" />
@@ -508,7 +517,8 @@
     <MESSAGE value="fix bug id" />
     <MESSAGE value="add get direction" />
     <MESSAGE value="add logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logs" />
+    <MESSAGE value="debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -823,28 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/locations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="24" />
-          <folding>
-            <element signature="e#224#1652#0" expanded="false" />
-            <element signature="e#1696#2586#0" expanded="false" />
-            <element signature="e#2627#3566#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/places.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#47#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2685">
@@ -899,6 +887,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/locations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="24" />
+          <folding>
+            <element signature="e#224#1652#0" expanded="false" />
+            <element signature="e#1696#2586#0" expanded="false" />
+            <element signature="e#2627#3566#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/places.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+            <element signature="e#225#493#0" expanded="false" />
+            <element signature="e#544#1602#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
